@@ -1,0 +1,26 @@
+{
+  "name": "osm-simple-features",
+  "version": "1.0.0",
+  "description": "Defines an opinionated mapping from OSM to simple GeoJSON features with multiple layers and defined schemas.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./package.postinstall.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukasmartinelli/osm-simple-features.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/lukasmartinelli/osm-simple-features/issues"
+  },
+  "homepage": "https://github.com/lukasmartinelli/osm-simple-features#readme",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "ldjson-stream": "^1.2.1",
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
