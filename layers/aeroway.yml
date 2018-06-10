@@ -1,0 +1,43 @@
+mapping:
+  geometry_types:
+  - linestring
+  - polygon
+  object_types:
+  - way
+  - relation
+  filter_tags:
+    aeroway:
+    - taxiway
+    - runway
+    - aerodrome
+    - helipad
+    - apron
+    - parking_position
+    - hangar
+    - gate
+    - terminal
+    - holding_position
+    - navigationaid
+    - airstrip
+    - windsock
+    - marking
+    - taxilane
+    - heliport
+    - fuel
+    - launchpad
+    - spaceport
+    - landingpad
+    - airport
+  linear_tags:
+  - areoway!=*
+  area_tags:
+  - aeroway
+  include_tags:
+  - aeroway
+  - ref
+  - surface
+  - icao
+  - iata
+  - width
+  - operator
+

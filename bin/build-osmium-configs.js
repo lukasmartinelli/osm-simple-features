@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const fs = require('fs');
+const path = require('path');
 const program = require('commander');
 const stream = require('stream');
 const streamify = require('stream-array');
@@ -47,6 +48,17 @@ function buildConfig(mapping) {
       return key + '=' + Object.keys(values).join(',');
     });
   }
+
+  let extraIncludeTags = [];
+  if (mapping.include_tags_mixins) {
+    if (mapping.include_tags_mixins.indexOf('name') >= 0) {
+      extraIncludeTags = extraIncludeTags.concat(yaml.safeLoad(
+        fs.readFileSync(path.join(__dirname, '../layers/mixins/name.yml')),
+        { encoding: 'utf8' }
+      ));
+    }
+  }
+
   return {
     attributes: {
       type: 'osm:type',
@@ -61,8 +73,7 @@ function buildConfig(mapping) {
     linear_tags: mapping.linear_tags,
     area_tags: mapping.area_tags,
     exclude_tags: [],
-    // include_tags: [mapping.include_tags.map((t) => t).join(',')]
-    include_tags: mapping.include_tags.map((t) => t)
+    include_tags: mapping.include_tags.concat(extraIncludeTags)
   };
 }
 

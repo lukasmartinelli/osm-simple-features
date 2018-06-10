@@ -1,4 +1,6 @@
 mapping:
+  geometry_types:
+  - linestring
   object_types:
   - way
   filter_tags:
@@ -37,7 +39,11 @@ mapping:
     - boat_lift
     - dredged_area
     - deep_well
+  include_tags_mixins:
+  - name
   include_tags:
+  - wikidata
+  - wikipedia
   - waterway
   - intermittent
   - layer

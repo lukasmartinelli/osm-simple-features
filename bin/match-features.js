@@ -7,8 +7,9 @@ const ldj = require('ldjson-stream');
 const stream = require('stream');
 
 function filterGeometryTypes(geomTypes) {
-  // if no explicit filtering set we allow everything
-  if (!geomTypes) return stream.PassThrough();
+  if (!geomTypes) {
+    geomTypes = ['linestring', 'point', 'polygon'];
+  };
   const types = new Set(geomTypes);
   return new stream.Transform({
     objectMode: true,

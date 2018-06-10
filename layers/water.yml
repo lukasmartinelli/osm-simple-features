@@ -1,0 +1,33 @@
+mapping:
+  geometry_types:
+  - polygon
+  object_types:
+  - way
+  - relation
+  filter_tags:
+    natural:
+    - bay
+    - water
+    man_made:
+    - reservoir_covered
+    waterway:
+    - dock
+    water:
+    - riverbank
+    landuse:
+    - reservoir
+    - riverbank
+  linear_tags:
+  - natural!=*
+  area_tags:
+  - water
+  include_tags:
+  - natural
+  - man_made
+  - waterway
+  - water
+  - landuse
+  - width
+  - tunnel
+  - covered
+

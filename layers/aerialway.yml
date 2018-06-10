@@ -1,0 +1,31 @@
+mapping:
+  object_types:
+  - way
+  filter_tags:
+    aerialway:
+    - pylon
+    - station
+    - chair_lift
+    - drag_lift
+    - platter
+    - t-bar
+    - goods
+    - magic_carpet
+    - gondola
+    - cable_car
+    - rope_tow
+    - zip_line
+    - j-bar
+    - mixed_lift
+    - canopy
+  include_tags:
+  - aerialway
+  - aerialway:occupancy
+  - aerialway:access
+  - aerialway:capacity
+  - aerialway:bubble
+  - aerialway:duration
+  - aerialway:heating
+  - operator
+  - ele
+

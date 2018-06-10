@@ -64,3 +64,7 @@ mapping:
   - building
   - height
 ```
+
+# Layers
+
+The out of the box layers are oriented toward the [**primary features of OpenStreetMap**](https://wiki.openstreetmap.org/wiki/Map_Features#Primary_features).
