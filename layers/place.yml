@@ -1,0 +1,49 @@
+mapping:
+  object_types:
+  - node
+  filter_tags:
+    place:
+    - locality
+    - village
+    - hamlet
+    - isolated_dwelling
+    - islet
+    - island
+    - neighbourhood
+    - suburb
+    - town
+    - plot
+    - farm
+    - city
+    - city_block
+    - allotments
+    - square
+    - county
+    - quarter
+    - region
+    - municipality
+    - state
+    - district
+    - borough
+    - archipelago
+    - province
+    - sea
+    - atoll
+    - area
+    - shieling
+  area_tags: 'iD'
+  include_tags:
+  - place
+  - wikidata
+  - wikipedia
+  - is_in:state
+  - is_in:state_code
+  - is_in
+  - population
+  - is_in:country
+  - addr:country
+  - addr:district
+  - ele
+  - addr:postcode
+  - addr:region
+

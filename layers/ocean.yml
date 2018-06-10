@@ -1,0 +1,11 @@
+mapping:
+  object_types:
+  - node
+  filter_tags:
+    place:
+    - ocean
+  area_tags: 'iD'
+  include_tags:
+  - place
+  - wikidata
+  - wikipedia

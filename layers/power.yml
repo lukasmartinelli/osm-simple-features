@@ -1,0 +1,49 @@
+mapping:
+  object_types:
+  - node
+  - way
+  - relation
+  filter_tags:
+    power:
+    - tower
+    - pole
+    - line
+    - generator
+    - substation
+    - minor_line
+    - portal
+    - transformer
+    - switch
+    - sub_station
+    - cable
+    - insulator
+    - plant
+    - catenary_mast
+    - busbar
+    - cable_distribution_cabinet
+    - station
+    - terminal
+    - heliostat
+    - switchgear
+    - compensator
+    - converter
+    - outlet
+    - underground_cable
+  area_tags: 'iD'
+  include_tags:
+  - power
+  - voltage
+  - operator
+  - design
+  - material
+  - generator:source
+  - generator:method
+  - generator:output:electricity
+  - generator:type
+  - wires
+  - circuits
+  - tower:type
+  - line
+  - height
+  - cables
+  - frequency

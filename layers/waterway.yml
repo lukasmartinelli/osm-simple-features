@@ -1,0 +1,50 @@
+mapping:
+  object_types:
+  - way
+  filter_tags:
+    waterway:
+    - stream
+    - ditch
+    - river
+    - drain
+    - riverbank
+    - canal
+    - dam
+    - weir
+    - rapids
+    - waterfall
+    - lock_gate
+    - drystream
+    - wadi
+    - dock
+    - boatyard
+    - milestone
+    - derelict_canal
+    - brook
+    - fuel
+    - fish_pass
+    - fairway
+    - turning_point
+    - sanitary_dump_station
+    - pressurised
+    - water_point
+    - spillway
+    - construction
+    - seaway
+    - offshore_field
+    - stream_end
+    - mooring
+    - boat_lift
+    - dredged_area
+    - deep_well
+  area_tags: 'iD'
+  include_tags:
+  - intermittent
+  - layer
+  - tunnel
+  - boat
+  - stream
+  - width
+  - length
+  - seasonal
+  - ele
