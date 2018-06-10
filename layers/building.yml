@@ -2,6 +2,57 @@ mapping:
   object_types:
   - way
   filter_tags:
+   # tags that indicate buildings
+   # https://github.com/gravitystorm/openstreetmap-carto/blob/c0c2187e32df718f2e2c800579e2a01abfe1905c/project.mml#L458-L462
+    amenity:
+    - place_of_worship
+    aerialway:
+    - station
+    railway:
+    - station
+    public_transport:
+    - station
+    man_made:
+    # https://github.com/gravitystorm/openstreetmap-carto/issues/2909
+    # https://wiki.openstreetmap.org/wiki/Tag%3Aman_made%3Dsilo
+    - silo
+    aeroway:
+    - terminal
+    # Hangars are airport buildings
+    # https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dhangar
+    - hangar
+    building:part:
+    - yes
+    - roof
+    - residential
+    - apartments
+    - construction
+    - commercial
+    - garage
+    - elevator
+    - retail
+    - column
+    - house
+    - industrial
+    - school
+    - steps
+    - room
+    - base
+    - anexo
+    - balcony
+    - office
+    - tower
+    - hospital
+    - church
+    - university
+    - warehouse
+    - floor
+    - shed
+    - hotel
+    - technical
+    - wall
+    - garages
+    - pillar
     building:
     - yes
     - house
@@ -92,6 +143,11 @@ mapping:
   - building
   include_tags:
   - building
+  - building:part
+  - building:layers
+  - building:flats
+  - building:material
+  - building:colour
   - addr:housenumber
   - addr:street
   - addr:city
@@ -104,10 +160,12 @@ mapping:
   - wall
   - height
   - roof:shape
-  - building:layers
-  - building:flats
-  - building:material
-  - building:colour
   - roof:colour
   - roof:material
   - layer
+  - amenity=place_of_worship
+  - aerialway=station
+  - railway=station
+  - public_transport=station
+  - man_made=silo
+  - aeroway=terminal,hangar

@@ -23,16 +23,17 @@ $ brew install tippecanoe
 Create the `building` layer from an OSM extract.
 
 ```bash
+# download extract
 $ wget -O dc.osm.pbf https://download.geofabrik.de/north-america/us/district-of-columbia-latest.osm.pbfa
+# create layer from extract
 $ npm run create-layer ./dc.osm.pbf building
-Building config files for osmium tags-filter and export in ./osmium
-Filtering PBF file ./dc.osm.pbf to ./osmium/building.osm.pbf
-Creating simple GeoJSON features from ./osmium/building.osm.pbf in ./osmium/building.ndjson
-Successfully created simple GeoJSON features in ./osmium/building.ndjson
+Building config files for osmium tags-filter and export in ./build
+Filtering PBF file ./dc.osm.pbf to ./build/building.osm.pbf
+Creating simple GeoJSON features from ./build/building.osm.pbf in ./build/building.geojson
+Successfully created simple GeoJSON features in ./build/building.geojson
 ```
 
 Create vector tiles from that layer for preview.
-
 
 ```bash
 $ npm run create-tiles building
