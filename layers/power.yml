@@ -3,14 +3,15 @@ mapping:
   - node
   - way
   - relation
+  geometry_types:
+  - polygon
+  - point
   filter_tags:
     power:
     - tower
     - pole
-    - line
     - generator
     - substation
-    - minor_line
     - portal
     - transformer
     - switch
@@ -28,8 +29,10 @@ mapping:
     - compensator
     - converter
     - outlet
-    - underground_cable
-  area_tags: 'iD'
+  linear_tags:
+  - power!=*
+  area_tags:
+  - power
   include_tags:
   - power
   - voltage

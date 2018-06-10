@@ -1,0 +1,29 @@
+mapping:
+  object_types:
+  - way
+  geometry_types:
+  - linestring
+  filter_tags:
+    power:
+    - line
+    - minor_line
+    - cable
+    - minor_cable
+    - underground_cable
+  include_tags:
+  - power
+  - voltage
+  - operator
+  - design
+  - material
+  - generator:source
+  - generator:method
+  - generator:output:electricity
+  - generator:type
+  - wires
+  - circuits
+  - tower:type
+  - line
+  - height
+  - cables
+  - frequency

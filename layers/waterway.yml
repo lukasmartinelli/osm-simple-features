@@ -37,8 +37,8 @@ mapping:
     - boat_lift
     - dredged_area
     - deep_well
-  area_tags: 'iD'
   include_tags:
+  - waterway
   - intermittent
   - layer
   - tunnel
