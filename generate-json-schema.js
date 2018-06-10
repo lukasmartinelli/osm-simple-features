@@ -6,7 +6,13 @@ const ldj = require('ldjson-stream');
 
 function propertyForKey(key) {
 	const schema = {
-		'type': 'string'
+		type: 'string',
+    taginfo: {
+      usersAll: key.users_all,
+      countAll: key.count_all,
+      valuesAll: key.values_all,
+      prevalentValues: key.prevalent_values.map((v) => v.value)
+    }
 	};
 	if (key.prevalent_values.length > 0 && key.detailed_values.length && key.values_all < 30000) {
 		schema.examples = key.detailed_values
@@ -39,14 +45,17 @@ function schemaForFeature(keys) {
 program
   .description('Generate JSON schema for all documented taginfo keys and tags')
 	.usage('[options] <key-stats>')
+	.option('--min-users [users]>', 'Min users required using the key to include key in schema', 40)
   .parse(process.argv);
 
-function run(keyStatsFile) {
+function run(keyStatsFile, minUsers) {
 	const keys = [];
 	fs.createReadStream(keyStatsFile)
 		.pipe(ldj.parse())
 		.on('data', (key) => {
-			keys.push(key);
+      if (key.users_all >= minUsers) {
+        keys.push(key);
+      }
 		})
 		.on('end', () => {
 			console.log(JSON.stringify(schemaForFeature(keys)));
@@ -54,5 +63,5 @@ function run(keyStatsFile) {
 }
 
 if (program.args.length === 1) {
-	run(program.args[0]);
+	run(program.args[0], parseInt(program.minUsers, 10));
 }

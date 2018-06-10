@@ -1,4 +1,5 @@
 # osm-simple-features
+
 Defines an opinionated mapping from OSM to simple GeoJSON features with multiple layers and defined schemas.
 
 
@@ -13,12 +14,13 @@ https://taginfo.openstreetmap.org/download
 
 ## Phase 0
 
-In phase 0 we machine generate a JSON schema trying to capture all keys with a wiki page and values from taginfo.
-If a key seems to have prevalent tags we start assuming we assign enum types to those keys.
+In phase 0 we generate a JSON schema trying to capture all keys with a wiki page and values from taginfo. This version of the schema is generated using code and is meant to be an initial catch all layer documenting which keys are available to us.
 
 ## Phase 1
 
-In phase 1 we curate the full on layer tagging schema and actively add or remove certain properties from the schema.
+In phase 1 we remove tags that are import specific or hyperlocal from the full on layer tagging schema.
+
+Phase 1 should contain a single layer full property schema supporting all tags that are then dispensed into layers in Phase 2.
 
 ## Phase 2
 
